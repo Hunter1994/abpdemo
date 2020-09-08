@@ -1,0 +1,31 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.7">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="5.5.1" />
+    <PackageReference Include="Volo.Abp.AspNetCore.Mvc" Version="3.0.5" />
+    <PackageReference Include="Volo.Abp.AspNetCore.Mvc.UI.Theme.Shared" Version="3.0.5" />
+    <PackageReference Include="Volo.Abp.Autofac" Version="3.0.5" />
+    <PackageReference Include="Volo.Abp.AutoMapper" Version="3.0.5" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\NewProject.Application\NewProject.Application.csproj" />
+    <ProjectReference Include="..\NewProject.EntityFrameworkCore.DbMigrations\NewProject.EntityFrameworkCore.DbMigrations.csproj" />
+    <ProjectReference Include="..\NewProject.HttpApi\NewProject.HttpApi.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Update="appsettings.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+</Project>
